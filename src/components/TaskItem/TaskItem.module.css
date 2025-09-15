@@ -1,0 +1,64 @@
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: #f1f5f9;
+    border-radius: 8px;
+    transition: background 0.3s;
+    text-decoration: none; /* Corrected typo from 'text' */
+    cursor: pointer;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    color: #94a3b8;
+  }
+  
+  .completedHighligth { /* Corrected typo from 'copletedHighligth' */
+    text-decoration: none;
+    font-weight: bold;
+    color: #16a34a;
+    background-color: aquamarine;
+    padding: 4px 8px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+  
+  .input {
+    flex: 1 1; /* Shorthand for flex-grow, flex-shrink, flex-basis */
+    padding: 6px;
+    border: 1px solid #94a3b8; /* Corrected 'border 16px' to 'border: 1px solid #94a3b8;' */
+    border-radius: 16px; /* Assuming 16px was intended for border-radius */
+  }
+  
+  .action {
+    display: flex;
+    gap: 6px;
+  }
+  
+  .edit {
+    background-color: transparent;
+    border: none;
+    color: #3b82f6;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+  
+  .edit:hover {
+    color: #1d4ed8;
+  }
+  
+  .delete { /* Corrected typo from 'delet' */
+    background-color: transparent;
+    border: none;
+    color: #ef4444;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .delete:hover {
+    color: red;
+  }

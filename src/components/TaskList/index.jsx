@@ -1,21 +1,23 @@
 // criação do componente TaskList
-import TaskItem from "../TaskItem"
-import styles from "./TaskList.module.css"
+import TaskItem from "../TaskItem";
+import styles from "./TaskList.module.css";
 
 export default function TaskList({
   tasks,
   toggleTask,
   deleteTask,
   editTask,
-  isCompletedList = false, 
+  isCompletedList = false,
 }) {
   // Verificar se tem uma tarefa
   if (tasks.length === 0) {
     return (
       <p className={styles.empty}>
-        {isCompletedList ? "Nenhuma tarefa concluída ainda." : "Nenhuma tarefa pendente."}
+        {isCompletedList
+          ? "Nenhuma tarefa concluída ainda."
+          : "Nenhuma tarefa pendente."}
       </p>
-    )
+    );
   }
 
   return (
@@ -27,15 +29,8 @@ export default function TaskList({
           toggleTask={toggleTask}
           deleteTask={deleteTask}
           editTask={editTask}
-          isCompletedList={isCompletedList} 
         />
       ))}
     </ul>
-  )
+  );
 }
-
-
-
-
-
-
