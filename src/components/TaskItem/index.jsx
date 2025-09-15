@@ -29,8 +29,8 @@ export default function TaskItem({
             value={newText}
             onChange={(e) => setNewText(e.target.value)}
           />
-          <button onClick={handleEdit}>Salvar</button>
-          <button onClick={() => setEditing(false)}>Cancelar</button>
+          <button onClick={handleEdit}>💾</button>
+          <button onClick={() => setEditing(false)}>↩️</button>
         </>
       ) : (
         <>
@@ -41,9 +41,9 @@ export default function TaskItem({
             {task.text}
           </span>
           {!isCompletedList && (
-            <button onClick={handleEdit}>Editar</button>
+            <button onClick={handleEdit}>✏️</button>
           )}
-          <button onClick={() => deleteTask(task.id)}>Excluir</button>
+          <button onClick={() => deleteTask(task.id)}>✕</button>
         </>
       )}
     </li>
