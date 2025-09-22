@@ -62,18 +62,23 @@ function App() {
 
       <TaskInput addTask={addTask} />
 
-      <h2>Pendentes</h2>
-      <TaskList
-        tasks={tasks.filter((t) => !t.completed)}
-        toggleTask={toggleTask}
-        deleteTask={deleteTask}
-        editTask={editTask}
-        isCompletedList={false}
-      />
 
+      <div className={styles.Container}>
+        <h2>Pendentes</h2>
+        <TaskList
+          tasks={tasks.filter((tarefa) => !tarefa.pendente)}
+          toggleTask={toggleTask}
+          deleteTask={deleteTask}
+          editTask={editTask}
+          isCompletedList={false}
+        />
+
+      </div>
+
+      
       <h2>Concluídas</h2>
       <TaskList
-        tasks={tasks.filter((t) => t.completed)}
+        tasks={tasks.filter((tarefa) => tarefa.completed)}
         toggleTask={toggleTask}
         deleteTask={deleteTask}
         editTask={editTask}
